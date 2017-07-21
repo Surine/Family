@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="UserStore" ></dbname>
+
+    <version value="1" ></version>
+
+    <list>
+        <mapping class="com.surine.family.JavaBean.Medicine"></mapping>
+        <mapping class="com.surine.family.JavaBean.Call"></mapping>
+    </list>
+</litepal>
