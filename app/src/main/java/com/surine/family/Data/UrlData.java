@@ -7,6 +7,8 @@ package com.surine.family.Data;
 public class UrlData {
     //药品post地址
     public static String medicine_post = "http://iot.celitea.cn:9999/";
+    //位置get地址
+    public static String postion_get = "http://iot.celitea.cn:9999/";
     //MQTT通信地址
     public static String mqtt = "tcp://iot.celitea.cn:1883";
     //订阅心率主题

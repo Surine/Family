@@ -2,6 +2,7 @@ package com.surine.family.InitApp;
 
 import android.app.Application;
 
+
 import com.surine.family.Utils.AgoraManager;
 
 import org.litepal.LitePalApplication;
@@ -14,8 +15,11 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //litepal
         LitePalApplication.initialize(getApplicationContext());
+        //声网sdk
         AgoraManager.getInstance().init(getApplicationContext());
+
     }
 }
 

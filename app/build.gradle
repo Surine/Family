@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.surine.family"
         minSdkVersion 19
@@ -18,11 +18,11 @@ android {
         }
     }
 
-    sourceSets{
-        main{
-            jni.srcDirs=[]
-            jniLibs.srcDirs=['src/main/jniLibs']
-            }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
     }
 }
 
@@ -46,4 +46,5 @@ dependencies {
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
     testCompile 'junit:junit:4.12'
     compile files('libs/agora-rtc-sdk.jar')
+    compile files('libs/Amap_2DMap_V5.2.0_20170627.jar')
 }

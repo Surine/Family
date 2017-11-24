@@ -111,7 +111,7 @@ public class First_page_fragment_one extends Fragment {
                         }
                         getActivity().runOnUiThread(new Runnable() {
                             public void run() {
-                                playHeartbeatAnimation();
+                            playHeartbeatAnimation();
                             }
                         });
                     }
@@ -392,6 +392,8 @@ public class First_page_fragment_one extends Fragment {
         add_heart.startAnimation(animationSet);
         add_temperature.startAnimation(animationSet);
     }
+
+
 
 }
 

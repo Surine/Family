@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -64,12 +65,12 @@ public class MainActivity extends BaseActivity
             @Override
             public void onClick(View view) {
               if(Position_page == 0){
-                 Toast.makeText(MainActivity.this,"关爱成功！",Toast.LENGTH_SHORT).show();
+                  startActivity(new Intent(MainActivity.this,MapActivity.class));
               }else if(Position_page == 1){
                   startActivity(new Intent(MainActivity.this,AddMedicineActivity.class));
               }else if(Position_page == 2){
-                      Intent intent = new Intent(MainActivity.this, CallActivity.class);
-                      startActivity(intent);
+                  Intent intent = new Intent(MainActivity.this, CallActivity.class);
+                  startActivity(intent);
               }
             }
         });
@@ -203,6 +204,14 @@ public class MainActivity extends BaseActivity
         builder.setMessage("\n黄昏，\n别让他们老无所依。");
         builder.setPositiveButton("如此",null);
         builder.show();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            return true;
+        }
+        return false;
     }
 }
 
